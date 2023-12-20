@@ -304,7 +304,7 @@ void sensus_main(cpp_int countOfVoters, cpp_int countOfCandidates, int bitsLengt
         RSA::PublicKey ePublic(ePrivate);
         cout << "\nИзбиратель сгенерировал себе ключи e_public и e_private\n";
 
-        cpp_int bNum = generate_random(0, countOfCandidates - 1); //мб минус 1 не делать хз
+        cpp_int bNum = generate_random(0, countOfCandidates - 1);
         string B = boost::lexical_cast<string>(bNum);
         cout << "\nИзбиратель i" << me << " голосует за кандидата №" << B << "\n";
         cout << "\nСообщение B = " << B << "\n";
